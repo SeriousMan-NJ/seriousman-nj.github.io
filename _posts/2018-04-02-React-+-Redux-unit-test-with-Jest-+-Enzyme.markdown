@@ -27,6 +27,8 @@ package.json에 스크립트 부분을 추가한다.
 ```
 # Redux Unit Test
 ## Actions Creators
+
+<!-- {% raw %} -->
 ```javascript
 import { RECEIVE_POST_LIST } from './constants'
 
@@ -37,7 +39,11 @@ export function receivePostList(postList) {
   }
 }
 ```
+<!-- {% endraw %} -->
+
 위에서 receivePostList는 다음과 같이 테스트할 수 있다.
+
+<!-- {% raw %} -->
 ```javascript
 import * as actions from './actions'
 import * as types from './constants'
@@ -53,7 +59,11 @@ describe('actions', () => {
   })
 })
 ```
+<!-- {% endraw %} -->
+
 ## Async Action Creators
+
+<!-- {% raw %} -->
 ```javascript
 import { RECEIVE_POST_LIST } from './constants'
 
@@ -74,7 +84,11 @@ export function fetchPostList() {
   }
 }
 ```
+<!-- {% endraw %} -->
+
 위에서 thunk를 사용하는 fetchPostList를 테스트하기 위해서 store에 thunk middleware를 넣어서 mocking해야 한다. fetch가 사용되므로, 네트워크를 이용하지 않도록 fetch-mock을 이용해 fetch를 mocking한다.
+
+<!-- {% raw %} -->
 ```javascript
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
@@ -107,7 +121,11 @@ describe('async actions', () => {
   })
 })
 ```
+<!-- {% endraw %} -->
+
 ## Reducers
+
+<!-- {% raw %} -->
 ```javascript
 import { RECEIVE_POST_LIST } from './constants'
 
@@ -122,7 +140,11 @@ export function postList(state=[], action) {
   }
 }
 ```
+<!-- {% endraw %} -->
+
 위에서 postList는 다음과 같이 테스트한다.
+
+<!-- {% raw %} -->
 ```javascript
 import * as reducers from './reducers'
 import * as types from './constants'
@@ -144,12 +166,16 @@ describe('postList reducer', () => {
   })
 })
 ```
+<!-- {% endraw %} -->
+
 ## React Component Unit Test
 Enzyme을 이용해서 테스트할 것이다. Jest에서 Enzyme을 사용하기 위해서 다음을 설치한다.
 ```bash
 $ yarn add --dev enzyme enzyme-adapter-react-16
 ```
 그리고 Enzyme을 사용할 때 다음과 같이 구성해야 한다.
+
+<!-- {% raw %} -->
 ```javascript
 import React from 'react'
 ...
@@ -158,7 +184,11 @@ import Adapter from 'enzyme-adapter-react-16'
 
 Enzyme.configure({ adapter: new Adapter() });
 ```
+<!-- {% endraw %} -->
+
 테스트할 Component를 다음과 같다.
+
+<!-- {% raw %} -->
 ```javascript
 import React, { Component } from 'react'
 import App from '../../components/App'
@@ -225,15 +255,18 @@ export class PostList extends Component {
     )
   }
 }
-
 export default connect(mapStateToProps, mapDispatchToProps)(PostList)
 ```
+<!-- {% endraw %} -->
+
 **강조1**: mapStateToProps와 mapDispatchToProps를 테스트하기 위해 export 했다.
 
 **강조2**: presentational component만 테스트하기 위해 PostList도 export 했다.
 
 
 다음은 테스트 파일이다. PostList 테스트와 Connected(Container) component 테스트가 함께 들어있다.
+
+<!-- {% raw %} -->
 ```javascript
 import React from 'react'
 import Enzyme, { mount, shallow } from 'enzyme'
@@ -289,12 +322,16 @@ describe('connectedComponent', () => {
   })
 })
 ```
+<!-- {% endraw %} -->
+
 **주의**: jest.fn()을 사용할 때와 jest.spyOn()을 사용해야 할 때를 구분한다.
 
 Connected component Integration Test
 하는 방법을 찾지 못했다.
 
 작업했던 코드조각은 아래와 같다. connectedComponent의 'should render posts' 테스트에 해당한다.
+
+<!-- {% raw %} -->
 ```javascript
 import React from 'react'
 import Enzyme, { mount, shallow } from 'enzyme'
@@ -380,6 +417,8 @@ describe('connectedComponent', () => {
   })
 })
 ```
+<!-- {% endraw %} -->
+
 # 참고문헌
 Jest.fn(), jest.spyOn(): https://facebook.github.io/jest/docs/en/jest-object.html
 
