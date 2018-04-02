@@ -2,3 +2,8 @@
 ---
 
 @import "{{ site.theme }}";
+
+.highlight .err {
+  color: #567482;
+  background: none;
+}

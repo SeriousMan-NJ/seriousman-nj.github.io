@@ -4,7 +4,7 @@ Jest로 React를 테스트하기 위해서 다음의 의존성 패키지를 설�
 $ yarn add --dev jest babel-core babel-jest babel-preset-env babel-preset-react react-test-renderer
 ```
 .babelrc도 다음과 같이 구성한다.
-```javascript
+```jsx
 {
   "presets": ["env", "react", "babel-preset-env"]
 }
@@ -14,7 +14,7 @@ Redux의 store를 테스트하기 위해서 redux-mock-store를 설치한다. fe
 $ yarn add --dev redux-mock-store fetch-mock
 ```
 package.json에 스크립트 부분을 추가한다.
-```javascript
+```jsx
 {
   ...
   "scripts": {
@@ -29,7 +29,7 @@ package.json에 스크립트 부분을 추가한다.
 ## Actions Creators
 
 <!-- {% raw %} -->
-```javascript
+```jsx
 import { RECEIVE_POST_LIST } from './constants'
 
 export function receivePostList(postList) {
@@ -44,7 +44,7 @@ export function receivePostList(postList) {
 위에서 receivePostList는 다음과 같이 테스트할 수 있다.
 
 <!-- {% raw %} -->
-```javascript
+```jsx
 import * as actions from './actions'
 import * as types from './constants'
 
@@ -64,7 +64,7 @@ describe('actions', () => {
 ## Async Action Creators
 
 <!-- {% raw %} -->
-```javascript
+```jsx
 import { RECEIVE_POST_LIST } from './constants'
 
 // recievePostList는 위에서 테스트하는 방법을 보였다.
@@ -89,7 +89,7 @@ export function fetchPostList() {
 위에서 thunk를 사용하는 fetchPostList를 테스트하기 위해서 store에 thunk middleware를 넣어서 mocking해야 한다. fetch가 사용되므로, 네트워크를 이용하지 않도록 fetch-mock을 이용해 fetch를 mocking한다.
 
 <!-- {% raw %} -->
-```javascript
+```jsx
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 import * as actions from './actions'
@@ -126,7 +126,7 @@ describe('async actions', () => {
 ## Reducers
 
 <!-- {% raw %} -->
-```javascript
+```jsx
 import { RECEIVE_POST_LIST } from './constants'
 
 export function postList(state=[], action) {
@@ -145,7 +145,7 @@ export function postList(state=[], action) {
 위에서 postList는 다음과 같이 테스트한다.
 
 <!-- {% raw %} -->
-```javascript
+```jsx
 import * as reducers from './reducers'
 import * as types from './constants'
 
@@ -176,7 +176,7 @@ $ yarn add --dev enzyme enzyme-adapter-react-16
 그리고 Enzyme을 사용할 때 다음과 같이 구성해야 한다.
 
 <!-- {% raw %} -->
-```javascript
+```jsx
 import React from 'react'
 ...
 import Enzyme, { mount, shallow } from 'enzyme'
@@ -189,7 +189,7 @@ Enzyme.configure({ adapter: new Adapter() });
 테스트할 Component를 다음과 같다.
 
 <!-- {% raw %} -->
-```javascript
+```jsx
 import React, { Component } from 'react'
 import App from '../../components/App'
 import { connect } from 'react-redux'
@@ -267,7 +267,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(PostList)
 다음은 테스트 파일이다. PostList 테스트와 Connected(Container) component 테스트가 함께 들어있다.
 
 <!-- {% raw %} -->
-```javascript
+```jsx
 import React from 'react'
 import Enzyme, { mount, shallow } from 'enzyme'
 import
@@ -332,7 +332,7 @@ Connected component Integration Test
 작업했던 코드조각은 아래와 같다. connectedComponent의 'should render posts' 테스트에 해당한다.
 
 <!-- {% raw %} -->
-```javascript
+```jsx
 import React from 'react'
 import Enzyme, { mount, shallow } from 'enzyme'
 import
@@ -420,20 +420,20 @@ describe('connectedComponent', () => {
 <!-- {% endraw %} -->
 
 # 참고문헌
-Jest.fn(), jest.spyOn(): https://facebook.github.io/jest/docs/en/jest-object.html
+Jest.fn(), jest.spyOn(): [https://facebook.github.io/jest/docs/en/jest-object.html](https://facebook.github.io/jest/docs/en/jest-object.html)
 
-Jest mock functions(): https://facebook.github.io/jest/docs/en/mock-function-api.html
+Jest mock functions(): [https://facebook.github.io/jest/docs/en/mock-function-api.html](https://facebook.github.io/jest/docs/en/mock-function-api.html)
 
-Enzyme working with React 16: http://airbnb.io/enzyme/docs/installation/react-16.html
+Enzyme working with React 16: [http://airbnb.io/enzyme/docs/installation/react-16.html](http://airbnb.io/enzyme/docs/installation/react-16.html)
 
-Jest - Testing React Apps: https://facebook.github.io/jest/docs/en/tutorial-react.html
+Jest - Testing React Apps: [https://facebook.github.io/jest/docs/en/tutorial-react.html](https://facebook.github.io/jest/docs/en/tutorial-react.html)
 
-redux & react 테스트: https://redux.js.org/recipes/writing-tests
+redux & react 테스트: [https://redux.js.org/recipes/writing-tests](https://redux.js.org/recipes/writing-tests)
 
-mapStateToProps, mapDispatchToPros를 모킹하는 3가지 방법: https://jsramblings.com/2018/01/15/3-ways-to-test-mapStateToProps-and-mapDispatchToProps.html
+mapStateToProps, mapDispatchToPros를 모킹하는 3가지 방법: [https://jsramblings.com/2018/01/15/3-ways-to-test-mapStateToProps-and-mapDispatchToProps.html](https://jsramblings.com/2018/01/15/3-ways-to-test-mapStateToProps-and-mapDispatchToProps.html)
 
-thunk가 있는 mapDispatchToProps 테스트: https://stackoverflow.com/questions/41633297/how-to-unit-test-mapdispatchtoprops-with-thunk-action
+thunk가 있는 mapDispatchToProps 테스트: [https://stackoverflow.com/questions/41633297/how-to-unit-test-mapdispatchtoprops-with-thunk-action](https://stackoverflow.com/questions/41633297/how-to-unit-test-mapdispatchtoprops-with-thunk-action)
 
-Node 싱글톤 모듈: https://medium.com/@lazlojuly/are-node-js-modules-singletons-764ae97519af
+Node 싱글톤 모듈: [https://medium.com/@lazlojuly/are-node-js-modules-singletons-764ae97519af](https://medium.com/@lazlojuly/are-node-js-modules-singletons-764ae97519af)
 
-Sinon 모킹 라이브러리: http://sinonjs.org
+Sinon 모킹 라이브러리: [http://sinonjs.org](http://sinonjs.org)
