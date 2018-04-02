@@ -1,20 +1,27 @@
 # 의존성 패키지 설치
 Jest로 React를 테스트하기 위해서 다음의 의존성 패키지를 설치해야 한다.
+
 ```bash
 $ yarn add --dev jest babel-core babel-jest babel-preset-env babel-preset-react react-test-renderer
 ```
+
 .babelrc도 다음과 같이 구성한다.
-```jsx
+
+```js
 {
   "presets": ["env", "react", "babel-preset-env"]
 }
 ```
+
 Redux의 store를 테스트하기 위해서 redux-mock-store를 설치한다. fetch를 mock하기 위해 fetch-mock도 설치한다.
+
 ```bash
 $ yarn add --dev redux-mock-store fetch-mock
 ```
+
 package.json에 스크립트 부분을 추가한다.
-```jsx
+
+```js
 {
   ...
   "scripts": {
@@ -25,7 +32,9 @@ package.json에 스크립트 부분을 추가한다.
   ...
 }
 ```
+
 # Redux Unit Test
+
 ## Actions Creators
 
 <!-- {% raw %} -->
@@ -304,9 +313,9 @@ describe('component', () => {
 describe('connectedComponent', () => {
   it('mapDispatchToProps', () => {
     const dispatch = jest.fn()
-	// actions.fetchPostList는 모듈의 함수이기 때문에 테스트가 끝나고 복원시켜주어야 한다.
-	// jest.fn()은 복원 방법을 제공하지 않으므로 jest.fn() 대신 jest.spyOn() 함수를 이용한다.
-	// jest.spyOn() 함수는 원래 함수를 호출하는데 이를 막기 위해 mockImplementation()을 통해 빈 구현체를 제공할 수 있다.
+  	// actions.fetchPostList는 모듈의 함수이기 때문에 테스트가 끝나고 복원시켜주어야 한다.
+  	// jest.fn()은 복원 방법을 제공하지 않으므로 jest.fn() 대신 jest.spyOn() 함수를 이용한다.
+  	// jest.spyOn() 함수는 원래 함수를 호출하는데 이를 막기 위해 mockImplementation()을 통해 빈 구현체를 제공할 수 있다.
     const fetchPostList = jest.spyOn(actions, 'fetchPostList').mockImplementation()
     mapDispatchToProps(dispatch).fetchPostList()
     expect(dispatch.mock.calls.length).toBe(1)
