@@ -3,7 +3,24 @@
 
 @import "{{ site.theme }}";
 
-.highlight .err {
-  color: #567482;
-  background: none;
+.highlight {
+  background: #fff;
+
+  .highlighter-rouge & {
+    background: #f0f0f0;
+  }
+
+  .err {
+    color: #567482;
+    background: none;
+  }
+}
+
+pre,
+code {
+  background-color: #f0f0f0;
+}
+
+.page-header, .main-content {
+  margin: 20px;
 }
