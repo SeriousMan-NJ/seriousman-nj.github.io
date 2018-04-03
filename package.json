@@ -1,0 +1,23 @@
+{
+  "name": "seriousman-nj.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "semantic-ui": "^2.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeriousMan-NJ/seriousman-nj.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SeriousMan-NJ/seriousman-nj.github.io/issues"
+  },
+  "homepage": "https://github.com/SeriousMan-NJ/seriousman-nj.github.io#readme"
+}

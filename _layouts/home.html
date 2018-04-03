@@ -3,6 +3,7 @@ layout: default
 ---
 <div class="ui divided items">
   {% for post in site.posts %}
+    {% unless post.categories contains "hidden" %}
     <div class="item">
       <div class="content">
         <a href="{{ post.url }}" class="header">{{ post.title }}</a>
@@ -20,5 +21,6 @@ layout: default
         </div>
       </div>
     </div>
+    {% endunless %}
   {% endfor %}
 </div>

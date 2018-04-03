@@ -9,20 +9,32 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/semantic.min.css">
     <script
     src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/semantic.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/semantic.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/semantic.min.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script src="/semantic/dist/semantic.min.js"></script>
+    
+    <script language='javascript'>
+      $(document).ready(function(){
+        $('.ui.accordion').accordion();
+      });
+    </script>
   </head>
   <body>
-    <div class="ui stackable center aligned padded grid">
+    <div class="ui stackable left aligned padded grid">
       <div style="min-height: 90vh" class="row">
         <div class="three wide black column">
           <section class="page-header">
             <a class="white-link" href="{{ site.url }}"><h3 class="project-name">{{ site.title | default: site.github.repository_name }}</h3></a>
-            <h4 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h4>
+            <!-- <h4 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h4> -->
             <!-- {% if site.github.is_project_page %}
               <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
             {% endif %}
@@ -31,6 +43,46 @@
               <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
             {% endif %} -->
           </section>
+          <div class="ui inverted vertical following fluid accordion text menu">
+            <div class="item">
+              <a href="{{ site.url }}" class="title">
+                <span>Home</span>
+              </a>
+            </div>
+            <div class="item">
+              <a href="/todos" class="title">
+                <span>Todo list</span>
+              </a>
+            </div>
+            <div class="item">
+              <a class="title">
+                <i class="dropdown icon"></i> <span>Categories (TODO)</span>
+              </a>
+              <div class="content">
+                <div class="accordion">
+                  <div class="title">
+                    <i class="dropdown icon"></i> <span>Level 1A-A</span>
+                  </div>
+                  <div class="content menu">
+                    <a class="item" href="#menu">Menu</a>
+                    <a class="item" href="#secondary-menu">Secondary Menu</a>
+                    <a class="item" href="#pointing">Pointing</a>
+                    <a class="item" href="#tabular">Tabular</a>
+                    <a class="item" href="#text">Text</a>
+                    <a class="item" href="#vertical-menu">Vertical Menu</a>
+                    <a class="item" href="#pagination">Pagination</a>
+                  </div>
+                </div>
+                <a class="item" href="#menu">Menu</a>
+                <a class="item" href="#secondary-menu">Secondary Menu</a>
+                <a class="item" href="#pointing">Pointing</a>
+                <a class="item" href="#tabular">Tabular</a>
+                <a class="item" href="#text">Text</a>
+                <a class="item" href="#vertical-menu">Vertical Menu</a>
+                <a class="item" href="#pagination">Pagination</a>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="thirteen wide left aligned column">
           <section class="main-content">
