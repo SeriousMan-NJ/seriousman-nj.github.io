@@ -3,6 +3,7 @@
 
 @import "{{ site.theme }}";
 
+/** Code highlight */
 .highlight {
   background: #fff;
 
@@ -21,6 +22,29 @@ code {
   background-color: #f0f0f0;
 }
 
-.page-header, .main-content {
-  margin: 20px;
+/** default layout */
+.page-header {
+  margin-top: 15px;
+}
+.main-content {
+  margin: 10px;
+  margin-top: 20px;
+}
+
+a.white-link {
+  color: rgba(255, 255, 255, 0.7);
+}
+a.white-link:hover {
+  color: #fff;
+}
+
+footer.site-footer {
+  min-height: 10vh;
+  border: 0;
+  padding: 30px;
+  background-color: #1b1c1d;
+  color: white;
+  a {
+    color: #00b5ad;
+  }
 }
