@@ -43,7 +43,7 @@
               <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
             {% endif %} -->
           </section>
-          <div class="ui inverted vertical following fluid accordion text menu">
+          <div class="ui inverted vertical following fluid accordion menu">
             <div class="item">
               <a href="{{ site.url }}" class="title">
                 <span>Home</span>
@@ -56,13 +56,14 @@
             </div>
             <div class="item">
               <a class="title">
-                <i class="dropdown icon"></i> <span>Categories</span>
+                <span style="margin-right: 5px;">Categories</span>
+                <i class="caret down icon"></i>
               </a>
               <div class="content">
                 {% for category_list in site.categories %}
                   {% for category in category_list[0] %}
                     {% unless category == "hidden" %}
-                      <a class="item" href="/category/{{ category }}">{{ category }}</a>
+                      <a class="item" href="/category/{{ category }}">{{ category | capitalize}}</a>
                     {% endunless %}
                   {% endfor %}
                 {% endfor %}

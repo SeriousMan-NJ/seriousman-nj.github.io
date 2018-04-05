@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: github-page
-tags: github-page markdown atom
+tags: github-page markdown atom liquid template escape
 ---
 # Github page 만들기
 
@@ -75,3 +75,7 @@ assets/css/style.scss
   background: none;
 }
 ```
+
+# 참고문헌
+
+How to escape liquid template tags?: [https://stackoverflow.com/questions/3426182/how-to-escape-liquid-template-tags](https://stackoverflow.com/questions/3426182/how-to-escape-liquid-template-tags)
