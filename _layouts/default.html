@@ -32,7 +32,7 @@
     <div class="ui stackable left aligned padded grid">
       <div style="min-height: 90vh" class="row">
         <div class="three wide black column">
-          <section class="page-header">
+          <section style="margin-left: 15px;" class="page-header">
             <a class="white-link" href="{{ site.url }}"><h3 class="project-name">{{ site.title | default: site.github.repository_name }}</h3></a>
             <!-- <h4 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h4> -->
             <!-- {% if site.github.is_project_page %}
@@ -59,11 +59,19 @@
                 <span style="margin-right: 5px;">Categories</span>
                 <i class="caret down icon"></i>
               </a>
+              {% if page.category %}
+              <div class="active content">
+              {% else %}
               <div class="content">
+              {% endif %}
                 {% for category_list in site.categories %}
                   {% for category in category_list[0] %}
                     {% unless category == "hidden" %}
-                      <a class="item" href="/category/{{ category }}">{{ category | capitalize}}</a>
+                      {% if category == page.category %}
+                        <a class="active item" href="/category/{{ category }}">{{ category | capitalize}}</a>
+                      {% else %}
+                        <a class="item" href="/category/{{ category }}">{{ category | capitalize}}</a>
+                      {% endif %}
                     {% endunless %}
                   {% endfor %}
                 {% endfor %}
