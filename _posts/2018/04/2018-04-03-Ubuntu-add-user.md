@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: ubuntu
 ---
 운영체제: Ubuntu 16.04 LTS
 

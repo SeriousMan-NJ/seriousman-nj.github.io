@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: github-page
 ---
 # Github page 만들기
 

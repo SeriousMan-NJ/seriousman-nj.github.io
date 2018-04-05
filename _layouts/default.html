@@ -56,10 +56,17 @@
             </div>
             <div class="item">
               <a class="title">
-                <i class="dropdown icon"></i> <span>Categories (TODO)</span>
+                <i class="dropdown icon"></i> <span>Categories</span>
               </a>
               <div class="content">
-                <div class="accordion">
+                {% for category_list in site.categories %}
+                  {% for category in category_list[0] %}
+                    {% unless category == "hidden" %}
+                      <a class="item" href="/category/{{ category }}">{{ category }}</a>
+                    {% endunless %}
+                  {% endfor %}
+                {% endfor %}
+                <!-- <div class="accordion">
                   <div class="title">
                     <i class="dropdown icon"></i> <span>Level 1A-A</span>
                   </div>
@@ -79,7 +86,7 @@
                 <a class="item" href="#tabular">Tabular</a>
                 <a class="item" href="#text">Text</a>
                 <a class="item" href="#vertical-menu">Vertical Menu</a>
-                <a class="item" href="#pagination">Pagination</a>
+                <a class="item" href="#pagination">Pagination</a> -->
               </div>
             </div>
           </div>
