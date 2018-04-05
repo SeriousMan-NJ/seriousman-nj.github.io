@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class="ui divided items">
+  {% for post in site.tags[page.tag] %}
+    <div class="item">
+      <div class="content">
+        <a href="{{ post.url }}" class="header">{{ post.title }}</a>
+        <div class="meta">
+          <span>
+            {%- assign date_format = site.minima.date_format | default: "%Y / %-m / %-d" -%}
+            {{ post.date | date: date_format }}
+          </span>
+        </div>
+        <div class="description">
+          <p></p>
+        </div>
+        <div class="extra">
+          {{ post.content | strip_html | truncatewords:10}}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

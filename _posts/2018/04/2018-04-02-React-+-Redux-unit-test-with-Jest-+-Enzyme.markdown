@@ -1,6 +1,7 @@
 ---
 layout: post
 categories: react
+tags: react redux unit-test jest enzyme
 ---
 # 의존성 패키지 설치
 Jest로 React를 테스트하기 위해서 다음의 의존성 패키지를 설치해야 한다.

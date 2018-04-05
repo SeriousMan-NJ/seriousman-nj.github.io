@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<h1>Tags</h1>
+{% for tag in site.tags %}
+  {% for tag in tag[0] %}
+    <a class="item" href="/tag/{{ tag }}">
+      <button class="ui tiny primary basic button">{{ tag }}</button>
+    </a>
+  {% endfor %}
+{% endfor %}

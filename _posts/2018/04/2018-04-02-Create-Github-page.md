@@ -1,6 +1,7 @@
 ---
 layout: post
 categories: github-page
+tags: github-page markdown atom
 ---
 # Github page 만들기
 

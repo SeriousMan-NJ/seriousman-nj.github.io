@@ -15,8 +15,18 @@ layout: default
   {{ page.content }}
 </div>
 
+<h3>태그</h3>
+
+<div style="margin-bottom: 50px;">
+  {% for tag in page.tags %}
+    <a href="/tag/{{ tag }}">
+      <button class="ui mini button">{{ tag }}</button>
+    </a>
+  {% endfor %}
+</div>
+
 <a href="{{ site.url }}">
-  <button class="ui fluid button">
+  <button class="ui basic button">
     목록으로 가기
   </button>
 </a>
