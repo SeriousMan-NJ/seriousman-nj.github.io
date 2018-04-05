@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Nginx reverse proxy settings for Node.js
-categories: yarn
+categories: nginx
 tags: nginx proxy reverse-proxy setting nodejs
 ---
 
