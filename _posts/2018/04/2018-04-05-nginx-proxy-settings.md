@@ -3,6 +3,7 @@ layout: post
 title: Nginx reverse proxy settings for Node.js
 categories: nginx
 tags: nginx proxy reverse-proxy setting nodejs
+comments: true
 ---
 
 단순한 리버시 프록시 헤더 설정은 다음과 같이 할 수 있다. (기록용)

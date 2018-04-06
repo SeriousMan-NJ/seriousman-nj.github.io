@@ -3,6 +3,7 @@ layout: post
 title: yarn global add serve 후 serve 명령어를 찾을 수 없다는 오류
 categories: yarn
 tags: react yarn ubuntu ubuntu-16.04
+comments: true
 ---
 
 Ubuntu 16.04 LTS에 React를 static server를 이용한 방법으로 deploy하기 위해서, `$ yarn global add serve` 명령을 통해 serve 패키지를 글로벌로 설치했다.

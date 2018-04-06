@@ -2,6 +2,7 @@
 layout: post
 categories: ubuntu
 tags: ubuntu ubuntu-16.04
+comments: true
 ---
 운영체제: Ubuntu 16.04 LTS
 
