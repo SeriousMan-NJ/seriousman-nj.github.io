@@ -1,8 +1,7 @@
 ---
 layout: default
-permalink: /todos
-categories: hidden
 ---
+
 # 블로그를 만들 때 고려해야 할 사항
 
 1. 카테고리
@@ -25,14 +24,21 @@ categories: hidden
 
 # TODO
 
-- 페이지네이션
 - 태그로 검색하기
 - 공유 기능
 - 댓글 기능
-- 메뉴를 반응형으로 만들어야 한다.
+- 메뉴를 반응형으로 만들기
+- 페이지네이션 이쁘게 만들기
 
-# Done
+# ISSUE
 
-- 메뉴에서 카테고리를 보여주어야 한다
+- [카테고리, 태그 페이지네이션을 지원하지 않는다]
+  - 출처: [https://jekyllrb.com/docs/pagination/](https://jekyllrb.com/docs/pagination/)
+  - 관련 이슈: [https://github.com/jekyll/jekyll/issues/2442](https://github.com/jekyll/jekyll/issues/2442)
+
+# DONE
+
+- 메뉴에서 카테고리를 보여주기
 - 카테고리로 필터링한 글만 보여주는 페이지
 - 태그로 필터링한 글만 보여주는 페이지
+- 페이지네이션

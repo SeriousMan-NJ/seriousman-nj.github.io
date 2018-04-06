@@ -27,12 +27,15 @@ github:
   tar_url: https://github.com/SeriousMan-NJ/seriousman-nj.github.io/tarball/master
   owner_name: 진지맨
 
+paginate: 5
+
 # Build settings
 markdown: kramdown
 theme: minima
 # theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 ---
 <header class="post-header">
   <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
@@ -26,7 +27,9 @@ layout: default
 </div>
 
 <a href="{{ site.url }}">
-  <button class="ui basic button">
+  <button style="margin-bottom: 30px;" class="ui basic button">
     목록으로 가기
   </button>
 </a>
+
+{% include disqus.html %}
