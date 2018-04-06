@@ -27,7 +27,7 @@ github:
   tar_url: https://github.com/SeriousMan-NJ/seriousman-nj.github.io/tarball/master
   owner_name: 진지맨
 
-paginate: 5
+paginate: 20
 disqus: "seriousman-nj-github-io"
 
 # Build settings
