@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Github page에 Disqus 댓글 추가하기
+title: Disqus 댓글 개수가 표시 안 되는 문제
 categories: github-page
 tags: github-page disqus
 comments: true
