@@ -28,6 +28,7 @@ github:
   owner_name: 진지맨
 
 paginate: 5
+disqus: "seriousman-nj-github-io"
 
 # Build settings
 markdown: kramdown
