@@ -2,6 +2,7 @@
 layout: post
 categories: github-page
 tags: github-page markdown atom liquid template escape
+comments: true
 ---
 # Github page 만들기
 
