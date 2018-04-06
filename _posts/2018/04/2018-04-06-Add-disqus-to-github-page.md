@@ -46,4 +46,6 @@ Disqus에서 Admin 메뉴에 들어가서 Tools > Discussions 메뉴에 접근�
 
 # 참고문헌
 
-Github page에 Disqus 추가하기 [https://xho95.github.io/blog/jekyll/disqus/migration/2017/01/20/Add-Disqus-to-Jekyll.html](https://xho95.github.io/blog/jekyll/disqus/migration/2017/01/20/Add-Disqus-to-Jekyll.html)
+Github page에 Disqus 추가하기: [https://xho95.github.io/blog/jekyll/disqus/migration/2017/01/20/Add-Disqus-to-Jekyll.html](https://xho95.github.io/blog/jekyll/disqus/migration/2017/01/20/Add-Disqus-to-Jekyll.html)
+
+Disqus Migration Tool: [https://help.disqus.com/customer/portal/articles/286778-migration-tools](https://help.disqus.com/customer/portal/articles/286778-migration-tools)
