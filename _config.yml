@@ -19,6 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Happy Coding
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://seriousman-nj.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+site_url: "https://seriousman-nj.github.io" # MUST be same as site.url. This is for providing environment-variable-consistant site url. ONLY Use it for Disqus
 # twitter_username: jekyllrb
 github_username: SeriousMan-NJ
 show_downloads: true

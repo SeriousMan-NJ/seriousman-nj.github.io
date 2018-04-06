@@ -9,7 +9,7 @@ layout: default
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       {{ page.date | date: date_format }}
     </time>
-    {% if page.comments %}<a style="margin-left: 10px;" href="{{ site.url }}{{ page.url }}#disqus_thread">0 Comments</a>{% endif %}
+    {% if page.comments %}<a style="margin-left: 10px;" href="{{ site.site_url }}{{ page.url }}#disqus_thread">0 Comments</a>{% endif %}
   </p>
 </header>
 
